@@ -5,7 +5,7 @@ public class OrderItem {
     private int quantity;
 
     public OrderItem(Product product, int quantity) throws NegativeValueException {
-        if (quantity <= 0) {throw new NegativeValueException("Quantity cannot be negative");}
+        if (quantity <= 0) {throw new NegativeValueException("Quantity cannot be 0 nor negative");}
         this.product = product;
         this.quantity = quantity;
     }
