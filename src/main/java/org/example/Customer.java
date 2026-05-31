@@ -15,7 +15,7 @@ public class Customer {
         if (email == null || email.trim().isEmpty()) {
             throw new EmptyValueException("Email cannot be null");
         }
-        if(!email.contains("@") || (!email.endsWith(".com") || !email.endsWith(".cz"))) {
+        if(!email.contains("@") || (!email.endsWith(".com") && !email.endsWith(".cz"))) {
             throw new InvalidEmailException("Invalid email address");
         }
         this.name = name;
